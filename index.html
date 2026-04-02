@@ -311,13 +311,31 @@ const collState={filters:false,add:false};
 try { user=JSON.parse(localStorage.getItem('eq_user')||'null'); } catch(e){}
 
 // ── API — simple fetch, no google.script.run needed ───────
-async function api(params) {
-  const url = API_URL + '?' + new URLSearchParams(params).toString();
-  const res  = await fetch(url);
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  const data = await res.json();
-  if (data.error) throw new Error(data.error);
-  return data;
+function api(params) {
+  return new Promise((resolve, reject) => {
+    const cbName = 'cb_' + Math.random().toString(36).slice(2);
+    const timeout = setTimeout(() => {
+      delete window[cbName];
+      reject(new Error('Request timed out'));
+    }, 15000);
+
+    window[cbName] = function(data) {
+      clearTimeout(timeout);
+      delete window[cbName];
+      if (data.error) reject(new Error(data.error));
+      else resolve(data);
+    };
+
+    const script = document.createElement('script');
+    script.onerror = () => {
+      clearTimeout(timeout);
+      delete window[cbName];
+      reject(new Error('Failed to reach server'));
+    };
+    script.src = API_URL + '?' + new URLSearchParams({...params, callback: cbName}).toString();
+    document.head.appendChild(script);
+    setTimeout(() => document.head.removeChild(script), 100);
+  });
 }
 
 // ── Cache helpers ─────────────────────────────────────────
