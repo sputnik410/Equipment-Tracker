@@ -19,23 +19,17 @@
 }
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 .app{max-width:440px;margin:0 auto;padding:0 0 100px}
-
-/* id bar */
 .id-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--card);border-bottom:0.5px solid var(--border);position:sticky;top:0;z-index:20}
 .id-left{display:flex;align-items:center;gap:9px}
 .id-dot{width:10px;height:10px;border-radius:50%}
 .id-name{font-size:14px;font-weight:600;color:var(--text)}
 .id-team{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:2px}
 .id-change{font-size:12px;color:var(--blue);font-weight:500;cursor:pointer;background:none;border:none;font-family:inherit;padding:0}
-
-/* tabs */
 .topbar{display:flex;gap:5px;padding:10px 16px 0;background:var(--card);border-bottom:0.5px solid var(--border)}
 .tab{flex:1;padding:8px 2px;border-radius:8px 8px 0 0;border:none;background:none;font-size:12px;font-weight:700;cursor:pointer;color:var(--text3);text-align:center;transition:all .15s;border-bottom:2.5px solid transparent;margin-bottom:-0.5px;letter-spacing:.01em}
 .tab.active{color:var(--text);border-bottom-color:var(--text)}
 .page{display:none;padding:14px 16px}
 .page.active{display:block}
-
-/* collapsibles */
 .collapsible{margin-bottom:10px;border-radius:var(--r);overflow:hidden;border:0.5px solid var(--border);background:var(--card)}
 .coll-header{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;cursor:pointer;user-select:none}
 .coll-title{font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.07em}
@@ -45,8 +39,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .coll-chev.open{transform:rotate(180deg)}
 .coll-body{display:none;padding:2px 14px 14px}
 .coll-body.open{display:block}
-
-/* filters */
 .filter-group{margin-bottom:10px}
 .filter-group:last-child{margin-bottom:0}
 .fgl{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
@@ -54,8 +46,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .fbtn{padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;background:var(--bg);color:var(--text2);transition:all .12s;font-family:inherit}
 .fbtn.act-all{background:var(--text);color:var(--bg);border-color:var(--text)}
 .fbtn.act-cat{background:var(--card);color:var(--text);border-color:var(--border2);border-width:1.5px}
-
-/* add form */
 .add-form{display:flex;gap:8px;flex-wrap:wrap;padding-top:2px}
 .add-form input,.add-form select{padding:9px 12px;border-radius:var(--rsm);border:0.5px solid var(--border);background:var(--bg);font-size:13px;color:var(--text);font-family:inherit;outline:none}
 .add-form input{flex:1;min-width:120px}
@@ -63,10 +53,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .add-form select{min-width:110px;-webkit-appearance:none}
 .add-form .badd{padding:9px 14px;border-radius:var(--rsm);border:none;background:var(--blue);color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
 .add-form .badd:hover{background:var(--blue-dk)}
-
 .sec-label{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin:12px 0 10px}
-
-/* item grid */
 .items-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .item-card{border-radius:var(--r);position:relative;cursor:pointer;border:2px solid var(--border);background:var(--card);transition:border-color .12s,box-shadow .12s}
 .item-card.taken{border-color:transparent}
@@ -86,15 +73,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .item-card.taken .edit-btn{background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.12)}
 .empty-state{padding:32px;text-align:center;color:var(--text3);font-size:13px}
 .grid-empty{grid-column:1/-1;background:var(--card);border-radius:var(--r);border:0.5px solid var(--border)}
-
-/* fab */
 .fab-wrap{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:8px}
 .fab{padding:13px 22px;border-radius:50px;border:none;background:var(--blue);color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(24,95,165,.4);white-space:nowrap}
 .fab:hover{background:var(--blue-dk)}
 .fab-count{background:rgba(255,255,255,.25);border-radius:20px;padding:2px 8px;font-size:12px;font-weight:700}
 .fab-clear{padding:10px 14px;border-radius:50px;border:0.5px solid var(--border);background:var(--card);color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
-
-/* log */
 .log-filters{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap}
 .log-entry{padding:11px 0;border-bottom:0.5px solid var(--border);display:flex;gap:10px}
 .log-entry:last-child{border-bottom:none}
@@ -106,8 +89,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .team-pill{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
 .card{background:var(--card);border:0.5px solid var(--border);border-radius:var(--r);padding:18px}
 .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-
-/* people */
 .people-block{margin-bottom:16px;padding-bottom:16px;border-bottom:0.5px solid var(--border)}
 .people-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .people-block-label{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -120,8 +101,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .add-person-row input:focus{border-color:var(--blue)}
 .add-person-btn{padding:8px 12px;border-radius:var(--rsm);border:none;background:var(--blue);color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
 .add-person-btn:hover{background:var(--blue-dk)}
-
-/* sheets / modals */
 .backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:40;align-items:flex-end;justify-content:center}
 .backdrop.open{display:flex}
 .sheet{background:var(--card);border-radius:16px 16px 0 0;padding:20px 20px 36px;width:100%;max-width:440px}
@@ -156,22 +135,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .member-btn-lg.sel{background:var(--blue);color:#fff;border-color:var(--blue)}
 .btn-confirm{padding:13px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;width:100%}
 .btn-confirm:disabled{background:var(--border);color:var(--text3);cursor:not-allowed}
-
-.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle}
+.spinner{display:inline-block;width:22px;height:22px;border:2.5px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.loading-overlay{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:300;flex-direction:column;gap:12px}
+.loading-overlay{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:300;flex-direction:column;gap:14px}
 .loading-overlay.hidden{display:none}
 .loading-title{font-size:15px;font-weight:500;color:var(--text2)}
+.no-members{font-size:12px;color:var(--text3);font-style:italic}
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:9px 16px;border-radius:12px;font-size:13px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap;z-index:200}
 .toast.show{opacity:1}
-.no-members{font-size:12px;color:var(--text3);font-style:italic}
 </style>
 </head>
 <body>
 
 <div class="loading-overlay" id="loading-overlay">
-  <div class="spinner" style="border-top-color:var(--blue);border-color:var(--border)"></div>
-  <div class="loading-title">Loading equipment tracker…</div>
+  <div class="spinner"></div>
+  <div class="loading-title" id="loading-title">Loading equipment tracker…</div>
+  <div id="loading-error" style="display:none;margin-top:4px;padding:12px 16px;background:var(--red-light);color:var(--red-text);border-radius:8px;font-size:13px;font-weight:500;max-width:300px;text-align:center"></div>
+  <button id="retry-btn" onclick="init()" style="display:none;padding:10px 20px;border-radius:8px;border:none;background:var(--blue);color:#fff;font-size:14px;font-weight:600;cursor:pointer;margin-top:4px">Retry</button>
 </div>
 
 <div class="app">
@@ -190,11 +170,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
     <div class="tab"        id="tab-people" onclick="switchTab('people')">People</div>
   </div>
 
-  <!-- ITEMS PAGE -->
   <div class="page active" id="page-items">
     <div style="margin-top:4px">
-
-      <!-- Collapsible: Filters -->
       <div class="collapsible">
         <div class="coll-header" onclick="toggleColl('filters')">
           <span class="coll-title">Filters</span>
@@ -214,8 +191,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
           </div>
         </div>
       </div>
-
-      <!-- Collapsible: Add item -->
       <div class="collapsible">
         <div class="coll-header" onclick="toggleColl('add')">
           <span class="coll-title">Add new item</span>
@@ -234,31 +209,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
           </div>
         </div>
       </div>
-
     </div>
     <div class="sec-label">Items</div>
     <div class="items-grid" id="items-grid"><div class="grid-empty"><div class="empty-state">Loading…</div></div></div>
   </div>
 
-  <!-- LOG PAGE -->
   <div class="page" id="page-log">
     <div class="log-filters" id="log-filters"></div>
     <div class="card" id="log-list"><div class="empty-state">Loading…</div></div>
   </div>
 
-  <!-- PEOPLE PAGE -->
   <div class="page" id="page-people">
     <div class="card" id="people-card"><div class="empty-state">Loading…</div></div>
   </div>
 </div>
 
-<!-- FAB -->
 <div class="fab-wrap" id="fab-wrap" style="display:none">
   <button class="fab-clear" onclick="clearSel()">Clear</button>
   <button class="fab" onclick="openActions()">Actions <span class="fab-count" id="fab-count">0</span></button>
 </div>
 
-<!-- Action sheet -->
 <div class="backdrop" id="action-back" onclick="closeActions()">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -273,7 +243,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
   </div>
 </div>
 
-<!-- Edit sheet -->
 <div class="backdrop" id="edit-back" onclick="closeEdit()">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -294,7 +263,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
   </div>
 </div>
 
-<!-- QR sheet -->
 <div class="backdrop" id="qr-back" onclick="closeQR()">
   <div class="qr-sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -306,8 +274,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
   </div>
 </div>
 
-<!-- Login sheet -->
-<div class="backdrop open" id="login-back">
+<div class="backdrop" id="login-back">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
     <div class="sheet-title">Who are you?</div>
@@ -322,6 +289,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
+// ── IMPORTANT: paste your Apps Script web app URL here ────
+const API_URL = 'https://script.google.com/macros/s/AKfycbzHmtTz_D2pnMqRDkZrTnXI_QjOXhfBC5toNqEcmduCpIsA9vJbpw5YJ-7FXcbdp8Ey/exec';
+
 const TM={
   Red:   {bg:'#FAECE7',border:'#F0997B',text:'#993C1D',dot:'#D85A30',ring:'rgba(216,90,48,.5)'},
   Blue:  {bg:'#E6F1FB',border:'#85B7EB',text:'#0C447C',dot:'#378ADD',ring:'rgba(55,138,221,.5)'},
@@ -336,53 +306,84 @@ const CATS = ['Camera','Lenses','Filters','Support','Other'];
 let items=[], members={Red:[],Blue:[],Green:[],Yellow:[],Orange:[],Purple:[]}, log=[];
 let user=null, sel=new Set(), tf='all', cf='all', lf='all';
 let loginTeam=null, loginMember=null, editIdx=null, editOrigId=null;
-const collState={filters:false, add:false};
+const collState={filters:false,add:false};
 
 try { user=JSON.parse(localStorage.getItem('eq_user')||'null'); } catch(e){}
 
-// ── API ────────────────────────────────────────────────────
-function api(params){
-  return new Promise((resolve,reject)=>{
-    google.script.run
-      .withSuccessHandler(resolve)
-      .withFailureHandler(reject)
-      .handleRequest(params);
-  });
+// ── API — simple fetch, no google.script.run needed ───────
+async function api(params) {
+  const url = API_URL + '?' + new URLSearchParams(params).toString();
+  const res  = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const data = await res.json();
+  if (data.error) throw new Error(data.error);
+  return data;
 }
 
-// ── Boot ───────────────────────────────────────────────────
-async function init(){
-  try {
-    const results = await Promise.all([
-      api({action:'getItems'}),
-      api({action:'getLog'}),
-      api({action:'getMembers'}),
-    ]);
-    items   = results[0].items   || [];
-    log     = results[1].log     || [];
-    members = results[2].members || members;
-  } catch(e){
-    const ov = document.getElementById('loading-overlay');
-    ov.innerHTML = '<p style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Could not load data</p>'
-      + '<p style="font-size:13px;color:var(--text2);margin-bottom:16px;max-width:280px;text-align:center">' + (e.message||String(e)) + '</p>'
-      + '<button onclick="init()" style="padding:10px 20px;border-radius:8px;border:none;background:var(--blue);color:#fff;font-size:14px;font-weight:600;cursor:pointer">Retry</button>';
-    return;
+// ── Cache helpers ─────────────────────────────────────────
+function saveCache(data) {
+  try { localStorage.setItem('eq_cache', JSON.stringify({...data, cachedAt:Date.now()})); } catch(e){}
+}
+function loadCache() {
+  try { return JSON.parse(localStorage.getItem('eq_cache')||'null'); } catch(e){ return null; }
+}
+
+// ── Boot ──────────────────────────────────────────────────
+async function init() {
+  document.getElementById('loading-error').style.display='none';
+  document.getElementById('retry-btn').style.display='none';
+  document.getElementById('loading-title').textContent='Loading equipment tracker…';
+
+  // Show cached data instantly if available
+  const cache = loadCache();
+  if (cache) {
+    items   = cache.items   || [];
+    log     = cache.log     || [];
+    members = cache.members || members;
+    showApp();
   }
 
+  // Always fetch fresh data in background
+  try {
+    const data = await api({action:'getAllData'});
+    items   = data.items   || [];
+    log     = data.log     || [];
+    members = data.members || members;
+    saveCache(data);
+    // Re-render with fresh data (whether or not we showed cache)
+    renderTF(); renderCF(); renderGrid();
+    renderLF(); renderLog();
+    renderPeople();
+    updateFilterSummary();
+    if (!cache) showApp(); // first load — show now
+  } catch(e) {
+    if (!cache) {
+      // Nothing to show — display error
+      document.getElementById('loading-spinner') && (document.getElementById('loading-spinner').style.display='none');
+      document.getElementById('loading-title').textContent='Could not load data';
+      const eb = document.getElementById('loading-error');
+      eb.textContent = e.message;
+      eb.style.display='block';
+      document.getElementById('retry-btn').style.display='block';
+    } else {
+      showToast('Using cached data — could not reach server');
+    }
+  }
+}
+
+function showApp() {
   document.getElementById('loading-overlay').classList.add('hidden');
   renderTF(); renderCF(); renderGrid();
   renderLF(); renderLog();
   renderPeople();
   updateFilterSummary();
-
   if (user) {
     renderIdBar();
   } else {
     renderLoginTeams();
     document.getElementById('login-back').classList.add('open');
   }
-
-  // QR code pre-select from URL
+  // Pre-select item from QR code URL param
   const qrId = new URLSearchParams(window.location.search).get('item');
   if (qrId) {
     const idx = items.findIndex(it=>it.id===qrId);
@@ -390,45 +391,45 @@ async function init(){
   }
 }
 
-// ── collapsibles ───────────────────────────────────────────
+// ── Collapsibles ──────────────────────────────────────────
 function toggleColl(id){
   collState[id]=!collState[id];
   document.getElementById(id+'-body').classList.toggle('open',collState[id]);
   document.getElementById(id+'-chev').classList.toggle('open',collState[id]);
 }
 
-// ── identity ───────────────────────────────────────────────
+// ── Identity ──────────────────────────────────────────────
 function openLogin(){
-  loginTeam=null; loginMember=null;
+  loginTeam=null;loginMember=null;
   document.getElementById('login-confirm').disabled=true;
   renderLoginTeams();
   document.getElementById('login-back').classList.add('open');
 }
 function confirmLogin(){
-  if(!loginTeam||!loginMember) return;
+  if(!loginTeam||!loginMember)return;
   user={team:loginTeam,member:loginMember};
   localStorage.setItem('eq_user',JSON.stringify(user));
   document.getElementById('login-back').classList.remove('open');
   renderIdBar();
 }
 function renderIdBar(){
-  if(!user) return;
+  if(!user)return;
   const c=TM[user.team];
   document.getElementById('id-bar').style.display='flex';
   document.getElementById('id-dot').style.background=c.dot;
   document.getElementById('id-name').textContent=user.member;
   const p=document.getElementById('id-team-pill');
-  p.textContent=user.team; p.style.background=c.bg; p.style.color=c.text;
+  p.textContent=user.team;p.style.background=c.bg;p.style.color=c.text;
 }
 function renderLoginTeams(){
-  const g=document.getElementById('login-teams'); g.innerHTML='';
+  const g=document.getElementById('login-teams');g.innerHTML='';
   TO.forEach(n=>{
     const c=TM[n];
     const b=document.createElement('button');
-    b.className='team-btn-lg'; b.textContent=n;
-    b.style.background=c.bg; b.style.color=c.text; b.id='ltb-'+n;
+    b.className='team-btn-lg';b.textContent=n;
+    b.style.background=c.bg;b.style.color=c.text;b.id='ltb-'+n;
     b.onclick=()=>{
-      loginTeam=n; loginMember=null;
+      loginTeam=n;loginMember=null;
       document.querySelectorAll('.team-btn-lg').forEach(x=>x.classList.remove('sel'));
       b.classList.add('sel');
       renderLoginMembers(n);
@@ -438,11 +439,11 @@ function renderLoginTeams(){
   });
 }
 function renderLoginMembers(t){
-  const g=document.getElementById('login-members'); g.innerHTML='';
+  const g=document.getElementById('login-members');g.innerHTML='';
   (members[t]||[]).forEach(m=>{
-    const b=document.createElement('button'); b.className='member-btn-lg';
-    const d=document.createElement('div'); d.className='dot'; d.style.background=TM[t].dot;
-    b.appendChild(d); b.appendChild(document.createTextNode(m));
+    const b=document.createElement('button');b.className='member-btn-lg';
+    const d=document.createElement('div');d.className='dot';d.style.background=TM[t].dot;
+    b.appendChild(d);b.appendChild(document.createTextNode(m));
     b.onclick=()=>{
       loginMember=m;
       document.querySelectorAll('.member-btn-lg').forEach(x=>x.classList.remove('sel'));
@@ -453,7 +454,7 @@ function renderLoginMembers(t){
   });
 }
 
-// ── tabs ───────────────────────────────────────────────────
+// ── Tabs ──────────────────────────────────────────────────
 function switchTab(t){
   ['items','log','people'].forEach(x=>{
     document.getElementById('tab-'+x).classList.toggle('active',x===t);
@@ -462,18 +463,18 @@ function switchTab(t){
   updateFAB();
 }
 
-// ── filters ────────────────────────────────────────────────
+// ── Filters ───────────────────────────────────────────────
 function updateFilterSummary(){
-  const parts=[];
-  if(tf!=='all') parts.push(tf);
-  if(cf!=='all') parts.push(cf);
-  document.getElementById('filter-summary').textContent=parts.length?parts.join(' · '):'All items';
+  const p=[];
+  if(tf!=='all')p.push(tf);
+  if(cf!=='all')p.push(cf);
+  document.getElementById('filter-summary').textContent=p.length?p.join(' · '):'All items';
 }
 function renderTF(){
   const f=document.getElementById('team-filters');
   f.innerHTML=`<button class="fbtn ${tf==='all'?'act-all':''}" onclick="setTF('all')">All</button>`;
   TO.forEach(t=>{
-    const c=TM[t], on=tf===t;
+    const c=TM[t],on=tf===t;
     f.innerHTML+=`<button class="fbtn ${on?'act-all':''}" style="${on?`background:${c.bg};color:${c.text};border-color:${c.border};border-width:1.5px`:`color:${c.text}`}" onclick="setTF('${t}')">${t}</button>`;
   });
   f.innerHTML+=`<button class="fbtn ${tf==='available'?'act-all':''}" onclick="setTF('available')">Available</button>`;
@@ -486,7 +487,7 @@ function renderCF(){
 function setTF(f){tf=f;sel.clear();renderTF();renderGrid();updateFAB();updateFilterSummary();}
 function setCF(f){cf=f;sel.clear();renderCF();renderGrid();updateFAB();updateFilterSummary();}
 
-// ── grid ───────────────────────────────────────────────────
+// ── Grid ──────────────────────────────────────────────────
 function renderGrid(){
   const g=document.getElementById('items-grid');
   const filtered=items.filter(it=>{
@@ -501,10 +502,8 @@ function renderGrid(){
     const cat=it.cat?`<span class="cat-badge">${it.cat}</span>`:'';
     if(it.checkedOutBy){
       const c=TM[it.checkedOutTeam]||{bg:'#f0ede8',border:'#ccc',text:'#555',dot:'#999',ring:'rgba(0,0,0,.3)'};
-      const borderStyle=isPicked
-        ?`border:2.5px solid ${c.dot};box-shadow:0 0 0 3px ${c.ring}`
-        :`border:1.5px solid ${c.border}`;
-      return `<div class="item-card taken" style="background:${c.bg};${borderStyle}" onclick="toggleSel(${i})">
+      const bs=isPicked?`border:2.5px solid ${c.dot};box-shadow:0 0 0 3px ${c.ring}`:`border:1.5px solid ${c.border}`;
+      return `<div class="item-card taken" style="background:${c.bg};${bs}" onclick="toggleSel(${i})">
         <div class="card-body">
           <div class="item-name" style="color:${c.text}">${it.name}</div>
           ${it.cat?`<span class="cat-badge" style="background:rgba(0,0,0,.1);border-color:rgba(0,0,0,.08);color:${c.text}">${it.cat}</span>`:''}
@@ -520,10 +519,8 @@ function renderGrid(){
         </div>
       </div>`;
     } else {
-      const borderStyle=isPicked
-        ?'border:2.5px solid #185FA5;box-shadow:0 0 0 3px rgba(24,95,165,.2)'
-        :'border:1.5px solid var(--border)';
-      return `<div class="item-card avail" style="${borderStyle}" onclick="toggleSel(${i})">
+      const bs=isPicked?'border:2.5px solid #185FA5;box-shadow:0 0 0 3px rgba(24,95,165,.2)':'border:1.5px solid var(--border)';
+      return `<div class="item-card avail" style="${bs}" onclick="toggleSel(${i})">
         <div class="card-body">
           <div class="item-name">${it.name}</div>
           ${cat}
@@ -549,22 +546,23 @@ function updateFAB(){
   document.getElementById('fab-count').textContent=sel.size;
 }
 
+// ── Add item ──────────────────────────────────────────────
 async function addItem(){
   const ni=document.getElementById('new-item-name');
   const nc=document.getElementById('new-item-cat');
-  const name=ni.value.trim(); if(!name) return;
+  const name=ni.value.trim();if(!name)return;
   try {
     const res=await api({action:'addItem',name,cat:nc.value||''});
-    if(res.error) throw new Error(res.error);
     items.push({name,id:res.id,cat:nc.value||'',checkedOutBy:null,checkedOutTeam:null});
-    ni.value=''; nc.value='';
-    renderGrid(); showToast('Added: '+name);
-  } catch(e){ showToast('Error: '+e.message); }
+    ni.value='';nc.value='';
+    renderGrid();showToast('Added: '+name);
+    saveCache({items,log,members});
+  } catch(e){showToast('Error: '+e.message);}
 }
 
-// ── actions ────────────────────────────────────────────────
+// ── Actions ───────────────────────────────────────────────
 function openActions(){
-  if(!user){ openLogin(); return; }
+  if(!user){openLogin();return;}
   const si=[...sel].map(i=>items[i]);
   const allA=si.every(it=>!it.checkedOutBy);
   const allT=si.every(it=>!!it.checkedOutBy);
@@ -572,45 +570,39 @@ function openActions(){
   document.getElementById('co-who').textContent='as '+user.member+' · '+user.team;
   document.getElementById('sel-list').innerHTML=si.map(it=>{
     const av=!it.checkedOutBy;
-    return `<div class="sel-row">
-      <span class="sel-name">${it.name}</span>
-      <span class="sel-status" style="background:${av?'#EAF3DE':'#FAECE7'};color:${av?'#3B6D11':'#993C1D'}">${av?'Available':'With '+it.checkedOutBy}</span>
-    </div>`;
+    return `<div class="sel-row"><span class="sel-name">${it.name}</span><span class="sel-status" style="background:${av?'#EAF3DE':'#FAECE7'};color:${av?'#3B6D11':'#993C1D'}">${av?'Available':'With '+it.checkedOutBy}</span></div>`;
   }).join('');
   const bc=document.getElementById('btn-co');
   const br=document.getElementById('btn-ret');
-  bc.disabled=!allA; bc.style.opacity=allA?'1':'.35';
-  br.disabled=!allT; br.style.opacity=allT?'1':'.35';
+  bc.disabled=!allA;bc.style.opacity=allA?'1':'.35';
+  br.disabled=!allT;br.style.opacity=allT?'1':'.35';
   document.getElementById('action-back').classList.add('open');
 }
 function closeActions(){document.getElementById('action-back').classList.remove('open');}
 
 async function doAction(type){
-  if(!user) return;
+  if(!user)return;
+  const si=[...sel].map(i=>items[i]);
+  const label=type==='out'?'Checked out':'Returned';
   const btn=document.getElementById(type==='out'?'btn-co':'btn-ret');
-  btn.innerHTML=type==='out'
-    ?'<span class="spinner"></span> Checking out…'
-    :'<span class="spinner"></span> Returning…';
-  btn.disabled=true;
+  btn.disabled=true;btn.style.opacity='.5';
   try {
-    const si=[...sel].map(i=>items[i]);
-    const label=type==='out'?'Checked out':'Returned';
     for(const it of si){
       const res=await api({action:type==='out'?'checkout':'return',who:user.member,team:user.team,item:it.name,itemId:it.id});
-      if(res.error) throw new Error(res.error);
       if(type==='out'){it.checkedOutBy=user.member;it.checkedOutTeam=user.team;}
       else{it.checkedOutBy=null;it.checkedOutTeam=null;}
       log.unshift({action:label,who:user.member,team:user.team,item:it.name,id:it.id,time:res.time,date:res.date,type});
     }
+    saveCache({items,log,members});
     const count=sel.size;
-    sel.clear(); closeActions(); renderGrid(); updateFAB(); renderLog();
+    sel.clear();closeActions();renderGrid();updateFAB();renderLog();
     showToast(label+' '+count+' item'+(count>1?'s':''));
-  } catch(e){ showToast('Error: '+e.message); closeActions(); }
+  } catch(e){showToast('Error: '+e.message);closeActions();}
 }
 
-// ── edit ───────────────────────────────────────────────────
+// ── Edit ──────────────────────────────────────────────────
 function openEdit(i){
-  editIdx=i; editOrigId=items[i].id;
+  editIdx=i;editOrigId=items[i].id;
   const it=items[i];
   document.getElementById('edit-title').textContent='Edit: '+it.name;
   document.getElementById('edit-name').value=it.name;
@@ -621,30 +613,30 @@ function openEdit(i){
 function closeEdit(){document.getElementById('edit-back').classList.remove('open');editIdx=null;editOrigId=null;}
 
 async function saveEdit(){
-  if(editIdx===null) return;
+  if(editIdx===null)return;
   const name=document.getElementById('edit-name').value.trim();
   const newId=document.getElementById('edit-id-inp').value.trim();
   const cat=document.getElementById('edit-cat').value;
   if(!name||!newId){showToast('Name and ID are required');return;}
   try {
-    const res=await api({action:'updateItem',itemId:editOrigId,name,newId,cat});
-    if(res.error) throw new Error(res.error);
-    items[editIdx].name=name; items[editIdx].id=newId; items[editIdx].cat=cat||null;
-    closeEdit(); renderGrid(); showToast('Saved');
-  } catch(e){ showToast('Error: '+e.message); }
+    await api({action:'updateItem',itemId:editOrigId,name,newId,cat});
+    items[editIdx].name=name;items[editIdx].id=newId;items[editIdx].cat=cat||null;
+    saveCache({items,log,members});
+    closeEdit();renderGrid();showToast('Saved');
+  } catch(e){showToast('Error: '+e.message);}
 }
 
 async function deleteFromEdit(){
-  if(editIdx===null) return;
+  if(editIdx===null)return;
   const it=items[editIdx];
   if(it.checkedOutBy){showToast('Cannot delete — item is checked out');return;}
   try {
-    const res=await api({action:'deleteItem',itemId:it.id});
-    if(res.error) throw new Error(res.error);
+    await api({action:'deleteItem',itemId:it.id});
     const name=it.name;
     items.splice(editIdx,1);
-    closeEdit(); renderGrid(); showToast('Removed: '+name);
-  } catch(e){ showToast('Error: '+e.message); }
+    saveCache({items,log,members});
+    closeEdit();renderGrid();showToast('Removed: '+name);
+  } catch(e){showToast('Error: '+e.message);}
 }
 
 function showQRFromEdit(){const i=editIdx;closeEdit();setTimeout(()=>showQR(i),220);}
@@ -656,7 +648,7 @@ function showQR(i){
   document.getElementById('qr-meta').textContent=it.id+(it.cat?' · '+it.cat:'');
   document.getElementById('qr-back').classList.add('open');
   const canvas=document.getElementById('qr-canvas');
-  const ctx=canvas.getContext('2d'); ctx.clearRect(0,0,160,160);
+  const ctx=canvas.getContext('2d');ctx.clearRect(0,0,160,160);
   if(window.QRCode){
     const tmp=document.createElement('div');
     new QRCode(tmp,{text:url,width:160,height:160,correctLevel:QRCode.CorrectLevel.M});
@@ -665,7 +657,7 @@ function showQR(i){
 }
 function closeQR(){document.getElementById('qr-back').classList.remove('open');}
 
-// ── log ────────────────────────────────────────────────────
+// ── Log ───────────────────────────────────────────────────
 function renderLF(){
   const c=document.getElementById('log-filters');
   c.innerHTML=`<button class="fbtn act-all" onclick="setLF('all',this)">All</button>`;
@@ -692,14 +684,14 @@ function renderLog(){
   }).join('');
 }
 
-// ── people ─────────────────────────────────────────────────
+// ── People ────────────────────────────────────────────────
 function renderPeople(){
   const card=document.getElementById('people-card');
   card.innerHTML=TO.map(team=>{
-    const c=TM[team], list=members[team]||[];
+    const c=TM[team],list=members[team]||[];
     const chips=list.length
-      ? list.map((m,i)=>`<span class="chip"><span class="dot" style="background:${c.dot}"></span>${m}<button class="chip-del" onclick="removePerson('${team}',${i})">✕</button></span>`).join('')
-      : '<span class="no-members">No members yet</span>';
+      ?list.map((m,i)=>`<span class="chip"><span class="dot" style="background:${c.dot}"></span>${m}<button class="chip-del" onclick="removePerson('${team}',${i})">✕</button></span>`).join('')
+      :'<span class="no-members">No members yet</span>';
     return `<div class="people-block">
       <div class="people-block-label">
         <span class="dot" style="background:${c.dot}"></span>
@@ -717,34 +709,34 @@ function renderPeople(){
 
 async function addPerson(team){
   const inp=document.getElementById('inp-'+team);
-  const name=inp.value.trim(); if(!name) return;
+  const name=inp.value.trim();if(!name)return;
   if((members[team]||[]).includes(name)){showToast(name+' is already on '+team+' team');return;}
   try {
-    const res=await api({action:'addMember',team,name});
-    if(res.error) throw new Error(res.error);
-    if(!members[team]) members[team]=[];
-    members[team].push(name); inp.value='';
-    renderPeople(); showToast('Added '+name+' to '+team+' team');
-  } catch(e){ showToast('Error: '+e.message); }
+    await api({action:'addMember',team,name});
+    if(!members[team])members[team]=[];
+    members[team].push(name);inp.value='';
+    saveCache({items,log,members});
+    renderPeople();showToast('Added '+name+' to '+team+' team');
+  } catch(e){showToast('Error: '+e.message);}
 }
 
 async function removePerson(team,i){
   const name=members[team][i];
   try {
-    const res=await api({action:'removeMember',team,name});
-    if(res.error) throw new Error(res.error);
+    await api({action:'removeMember',team,name});
     members[team].splice(i,1);
-    renderPeople(); showToast('Removed '+name);
-  } catch(e){ showToast('Error: '+e.message); }
+    saveCache({items,log,members});
+    renderPeople();showToast('Removed '+name);
+  } catch(e){showToast('Error: '+e.message);}
 }
 
 function showToast(msg){
   const t=document.getElementById('toast');
-  t.textContent=msg; t.classList.add('show');
+  t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2400);
 }
 
-init();
+window.onload=init;
 </script>
 </body>
 </html>
