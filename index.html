@@ -311,37 +311,18 @@ const collState={filters:false,add:false};
 try { user=JSON.parse(localStorage.getItem('eq_user')||'null'); } catch(e){}
 
 // ── API — simple fetch, no google.script.run needed ───────
-function api(params) {
-  return new Promise((resolve, reject) => {
-    const cbName = 'cb_' + Math.random().toString(36).slice(2);
-    const script = document.createElement('script');
+const WORKER_URL  = 'https://dawn-meadow-f443.sputnik410.workers.dev/';
 
-    const cleanup = () => {
-      delete window[cbName];
-      if (script.parentNode) script.parentNode.removeChild(script);
-    };
-
-    const timeout = setTimeout(() => {
-      cleanup();
-      reject(new Error('Request timed out'));
-    }, 20000);
-
-    window[cbName] = function(data) {
-      clearTimeout(timeout);
-      cleanup();
-      if (data.error) reject(new Error(data.error));
-      else resolve(data);
-    };
-
-    script.onerror = () => {
-      clearTimeout(timeout);
-      cleanup();
-      reject(new Error('Failed to reach server'));
-    };
-
-    script.src = API_URL + '?' + new URLSearchParams({...params, callback: cbName}).toString();
-    document.body.appendChild(script); // body instead of head — more reliable on mobile
-  });
+async function api(params) {
+  const url = WORKER_URL + '?' + new URLSearchParams({
+    target: API_URL,
+    ...params
+  }).toString();
+  const res  = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const data = await res.json();
+  if (data.error) throw new Error(data.error);
+  return data;
 }
 
 // ── Cache helpers ─────────────────────────────────────────
