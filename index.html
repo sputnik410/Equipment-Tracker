@@ -311,7 +311,7 @@ const collState={filters:false,add:false};
 try { user=JSON.parse(localStorage.getItem('eq_user')||'null'); } catch(e){}
 
 // ── API — simple fetch, no google.script.run needed ───────
-const WORKER_URL  = 'https://dawn-meadow-f443.sputnik410.workers.dev/';
+const WORKER_URL  = 'https://dawn-meadow-f443.sputnik410.workers.dev';
 
 async function api(params) {
   const url = WORKER_URL + '?' + new URLSearchParams({
